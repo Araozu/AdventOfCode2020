@@ -7,6 +7,7 @@
 
     <ItemGroup>
         <Compile Include="Dia01\Puzzle1.fs" />
+        <Compile Include="Dia01\Puzzle2.fs" />
         <Content Include=".gitignore" />
         <Compile Include="Program.fs" />
     </ItemGroup>

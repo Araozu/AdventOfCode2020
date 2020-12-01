@@ -12,4 +12,7 @@ let main _ =
     getFilePath 1 1
     |> Puzzle1.puzzle1
 
+    getFilePath 1 1
+    |> Puzzle2.puzzle2
+    
     0 // return an integer exit code
