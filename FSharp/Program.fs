@@ -9,10 +9,21 @@ let getFilePath (day: int) number =
 
 [<EntryPoint>]
 let main _ =
+    let s = System.Diagnostics.Stopwatch()
+    let s2 = System.Diagnostics.Stopwatch()
+    
+    s2.Start()
     getFilePath 1 1
     |> Puzzle1.puzzle1
-
+    s2.Stop()
+    
+    printfn "micro: %f" s2.Elapsed.TotalMilliseconds
+    
+    s.Start()
     getFilePath 1 1
     |> Puzzle2.puzzle2
+    s.Stop()
     
-    0 // return an integer exit code
+    printfn "micro: %f" s.Elapsed.TotalMilliseconds
+    
+    0

@@ -3,6 +3,7 @@ open FSharp.Dia01.Puzzle1
 
 let rec internal find3 value numbers =
     match numbers with
+    | [] -> (-1, -1, -1)
     | x::xs ->
         let resto = value - x
         match find2 resto xs with
@@ -10,8 +11,6 @@ let rec internal find3 value numbers =
             find3 value xs
         | (v2, v3) ->
             (x, v2, v3)
-        
-    | [] -> (-1, -1, -1)
 
 let puzzle2 filePath =
     System.IO.File.ReadAllLines(filePath)

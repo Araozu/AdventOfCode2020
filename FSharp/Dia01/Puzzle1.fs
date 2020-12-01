@@ -3,10 +3,10 @@ open System.Collections.Generic
 
 let rec find2 value numbers =
     match numbers with
+    | [] -> (-1, -1)
     | x::xs ->
         try (x, List.find (fun v -> x + v = value) xs)
         with :? KeyNotFoundException -> find2 value xs
-    | [] -> (-1, -1)
 
 let puzzle1 filePath =
     System.IO.File.ReadAllLines(filePath)
