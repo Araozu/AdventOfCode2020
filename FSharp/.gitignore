@@ -12,6 +12,9 @@
 # obj
 .obj
 
+# Input de los problemas
+**/entrada.txt
+
 # User-specific files
 *.rsuser
 *.suo

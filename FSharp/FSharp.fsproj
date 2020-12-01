@@ -6,8 +6,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Program.fs" />
+        <Compile Include="Dia01\Puzzle1.fs" />
         <Content Include=".gitignore" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
 </Project>
