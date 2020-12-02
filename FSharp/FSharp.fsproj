@@ -8,8 +8,10 @@
     <ItemGroup>
         <Compile Include="Dia01\Puzzle1.fs" />
         <Compile Include="Dia01\Puzzle2.fs" />
-        <Content Include=".gitignore" />
+        <Compile Include="src\Benchmark.fs" />
+        <Compile Include="src\Dia02.fs" />
         <Compile Include="Program.fs" />
+        <Content Include=".gitignore" />
     </ItemGroup>
 
 </Project>

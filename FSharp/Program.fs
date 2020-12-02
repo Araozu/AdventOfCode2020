@@ -1,4 +1,6 @@
-﻿open FSharp.Dia01
+﻿open FSharp
+open FSharp.Benchmark
+open FSharp.Dia01
 
 let getFilePath (day: int) number =
     let day' =
@@ -9,21 +11,11 @@ let getFilePath (day: int) number =
 
 [<EntryPoint>]
 let main _ =
-    let s = System.Diagnostics.Stopwatch()
-    let s2 = System.Diagnostics.Stopwatch()
+
+    // benchmark (fun () -> getFilePath 1 1 |> Puzzle1.puzzle1)
+    // benchmark (fun () -> getFilePath 1 1 |> Puzzle2.puzzle2)
+
+    benchmark (fun () -> getFilePath 2 1 |> Dia02.puzzle)
     
-    s2.Start()
-    getFilePath 1 1
-    |> Puzzle1.puzzle1
-    s2.Stop()
-    
-    printfn "micro: %f" s2.Elapsed.TotalMilliseconds
-    
-    s.Start()
-    getFilePath 1 1
-    |> Puzzle2.puzzle2
-    s.Stop()
-    
-    printfn "micro: %f" s.Elapsed.TotalMilliseconds
     
     0
