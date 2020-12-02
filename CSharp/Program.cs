@@ -6,13 +6,15 @@ namespace CSharp
     {
         private static string GetFilePath(int day, int puzzle)
         {
-            var dayF = (day.ToString().Length == 1) ? "0" + day : day.ToString();
+            var dayF = day.ToString().Length == 1 ? "0" + day : day.ToString();
 
             return $"/home/araozu/Programacion/AdventOfCode2020/inputs/input_{dayF}_{puzzle}.txt";
         }
 
         private static void Main(string[] _)
         {
+            var bench = new Benchmark();
+            /*
             var sw = new System.Diagnostics.Stopwatch();
             sw.Start();
             Dia01.Puzzle1(GetFilePath(1, 1));
@@ -26,6 +28,12 @@ namespace CSharp
             sw2.Stop();
 
             Console.WriteLine("Milisegundos: {0}", sw2.Elapsed.TotalMilliseconds);
+            */
+            
+            bench.Start();
+            Dia02.Puzzle01(GetFilePath(2, 1));
+            bench.Stop();
+            
         }
     }
 }
