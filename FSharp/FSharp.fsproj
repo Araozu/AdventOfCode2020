@@ -10,6 +10,7 @@
         <Compile Include="Dia01\Puzzle2.fs" />
         <Compile Include="src\Benchmark.fs" />
         <Compile Include="src\Dia02.fs" />
+        <Compile Include="src\Dia03.fs" />
         <Compile Include="Program.fs" />
         <Content Include=".gitignore" />
     </ItemGroup>
