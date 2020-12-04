@@ -13,7 +13,7 @@ defmodule Advent do
   def obtenerRutaArchivo(dia, puzzle) do
     ndiaR = Integer.to_string(dia)
     ndia = if String.length(ndiaR) == 1 do "0#{ndiaR}" else ndiaR end
-    "/home/araozu/Programacion/AdventOfCode2020/inputs/input_#{ndia}_#{puzzle}.txt"
+    "/home/araozu/Programacion/AdventOfCode2020/inputs/input_#{ndia}.txt"
   end
 
   def main do

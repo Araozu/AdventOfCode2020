@@ -16,9 +16,7 @@ let private getTreeAmount data right down =
     Seq.fold foldFn (0, 0, down - 1) data
 
 
-let puzzle filePath =
-    let data = System.IO.File.ReadAllLines filePath
-    
+let puzzle data =
     let (treeAmount1, _, _) = getTreeAmount data 1 1
     let (treeAmount2, _, _) = getTreeAmount data 3 1
     let (treeAmount3, _, _) = getTreeAmount data 5 1

@@ -40,12 +40,12 @@ defmodule Advent.Dia01 do
   end
 
   def puzzle1(rutaArchivo) do
+    t1 = :os.system_time(:microsecond)
     {:ok, str} = File.read(rutaArchivo)
     numeros = Enum.map(String.split(str, "\n"), &(if &1 == "" do 0 else String.to_integer(&1) end))
 
     # find2p(2020, numeros)
 
-    t1 = :os.system_time(:microsecond)
     strRes =
       case find2(2020, numeros) do
         {:ok, v1, v2} -> "El resultado es #{v1 * v2}"
