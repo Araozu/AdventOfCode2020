@@ -1,4 +1,4 @@
-defmodule Advent.Dia02 do
+defmodule Advent.Dia05 do
   @moduledoc false
 
   def transformar_a_bits(str) do

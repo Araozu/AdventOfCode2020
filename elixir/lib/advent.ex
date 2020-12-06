@@ -18,6 +18,7 @@ defmodule Advent do
 
   def main do
     # Advent.Dia01.puzzle1(obtenerRutaArchivo(1, 1))
-    bench(fn -> Advent.Dia02.puzzle(obtenerRutaArchivo(5)) end)
+    # bench(fn -> Advent.Dia05.puzzle(obtenerRutaArchivo(5)) end)
+    bench(fn -> Advent.Dia06.puzzle(obtenerRutaArchivo(6)) end)
   end
 end
