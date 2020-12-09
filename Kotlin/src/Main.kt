@@ -14,5 +14,6 @@ fun benchmark(f: () -> Unit) {
 }
 
 fun main() {
-    benchmark { puzzle(getFilePath(7)) }
+    // benchmark { puzzle(getFilePath(7)) }
+    benchmark { Dia08.puzzle(getFilePath(8)) }
 }
