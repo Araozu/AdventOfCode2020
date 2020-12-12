@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharp
 {
@@ -11,11 +12,23 @@ namespace CSharp
             return $"/home/araozu/Programacion/AdventOfCode2020/inputs/input_{dayF}.txt";
         }
 
+        private static string GetFilePath(int day, object _)
+        {
+            var dayF = day.ToString().Length == 1 ? "0" + day : day.ToString();
+
+            return $"/home/araozu/Programacion/AdventOfCode2020/inputs/input_{dayF}_test.txt";
+        }
+
         private static string[] GetData(int day)
         {
             return System.IO.File.ReadAllLines(GetFilePath(day));
         }
-        
+
+        private static string[] GetData(int day, object _)
+        {
+            return System.IO.File.ReadAllLines(GetFilePath(day, _));
+        }
+
         private static void Main(string[] _)
         {
             var bench = new Benchmark();
@@ -40,15 +53,18 @@ namespace CSharp
             bench.Start();
             Dia03.Puzzle(GetFilePath(3));
             bench.Stop();
-            */
-
-            var lines = GetData(4);
+            
             bench.Start();
             var validCount = Dia04.Puzzle(lines);
             bench.Stop();
             // The solution to the first part was 179
             Console.WriteLine("Valid passports with metric 1: {0}", validCount);
+            */
 
+            var lines = GetData(11);
+            bench.Start();
+            Dia11.Puzzle(lines);
+            bench.Stop();
         }
     }
 }
