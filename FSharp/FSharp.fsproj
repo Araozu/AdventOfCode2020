@@ -12,6 +12,7 @@
         <Compile Include="src\Dia02.fs" />
         <Compile Include="src\Dia03.fs" />
         <Compile Include="src\Dia12.fs" />
+        <Compile Include="src\Dia13.fs" />
         <Compile Include="Program.fs" />
         <Content Include=".gitignore" />
     </ItemGroup>

@@ -18,12 +18,12 @@ let getLines day isTest =
 [<EntryPoint>]
 let main _ =
 
-    let lines = getLines 12 false
+    let lines = getLines 13 false
 
     // benchmark (fun () -> getFilePath 1 1 |> Puzzle1.puzzle1)
     // benchmark (fun () -> getFilePath 1 1 |> Puzzle2.puzzle2)
     // benchmark (fun () -> getFilePath 2 1 |> Dia02.puzzle)
     // benchmark (fun () -> Dia03.puzzle lines)
-    benchmark (fun () -> Dia12.puzzle2 lines)
+    benchmark (fun () -> Dia13.puzzle2 lines)
 
     0
